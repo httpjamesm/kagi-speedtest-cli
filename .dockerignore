@@ -1,0 +1,9 @@
+.git
+.github
+node_modules
+.DS_Store
+kagi-speedtest
+coverage
+dist
+out
+*.log

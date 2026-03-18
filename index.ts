@@ -1,4 +1,4 @@
-import { runDownloadTest, runUploadTest, runPingJitterTest } from "./speedtest";
+import { runDownloadTest, runUploadTest, runPingJitterTest } from "./speedtest-worker";
 import { showHeader, showProgressBar, showSummary, showError } from "./display";
 
 const DEFAULT_SERVER_URL = "https://speedtest.kagi-0e7.workers.dev";
@@ -25,12 +25,12 @@ function parseArgs(): { serverURL: string; help: boolean } {
 
 function showHelp() {
   console.log("Kagi Speedtest CLI\n");
-  console.log("Usage: bun run index.ts [options]\n");
+  console.log("Usage: kagi-speedtest [options]\n");
   console.log("Options:");
   console.log("  -u, --url <url>  Custom server URL");
   console.log("  -h, --help       Show this help message\n");
   console.log("Example:");
-  console.log("  bun run index.ts --url https://speedtest.example.com\n");
+  console.log("  kagi-speedtest --url https://speedtest.example.com\n");
 }
 
 async function main() {

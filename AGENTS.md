@@ -39,6 +39,21 @@ bun run index.ts  # TypeScript is transpiled on the fly
 bun build --check
 ```
 
+### Building Standalone Binary
+```bash
+# Build standalone executable (includes Bun runtime)
+bun run build
+
+# Or directly:
+bun build --compile --outfile=kagi-speedtest index.ts
+
+# For other platforms (cross-compilation):
+bun build --compile --target=linux-x64 --outfile=kagi-speedtest-linux index.ts
+bun build --compile --target=darwin-x64 --outfile=kagi-speedtest-macos-x64 index.ts
+bun build --compile --target=darwin-arm64 --outfile=kagi-speedtest-macos-arm64 index.ts
+bun build --compile --target=windows-x64 --outfile=kagi-speedtest.exe index.ts
+```
+
 **No linting configured** - Consider adding ESLint or using Bun's built-in linter if needed.
 
 ## Code Style Guidelines

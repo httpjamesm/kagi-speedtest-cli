@@ -3,6 +3,10 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "bin": "./kagi-speedtest",
+  "scripts": {
+    "build": "bun build --compile --outfile=kagi-speedtest index.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
